@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Instagram, Twitter, Linkedin, Mail, Facebook, Youtube, type LucideIcon, ArrowUpRight } from 'lucide-react';
+import { Instagram, Twitter, Linkedin, Mail, Facebook, Youtube, type LucideIcon } from 'lucide-react';
 import { footerConfig } from '../config';
 
 gsap.registerPlugin(ScrollTrigger);
