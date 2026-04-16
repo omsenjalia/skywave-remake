@@ -36,7 +36,7 @@ export function Footer() {
           {/* Logo + Tagline */}
           <div className="mb-16 md:mb-20">
             <div className="flex items-center gap-4 mb-4">
-              <img src="/logo.svg" alt={footerConfig.logoText} className="h-10 w-auto" />
+              <img src={footerConfig.logoPath} alt={footerConfig.logoText} className="h-10 w-auto" />
             </div>
             {footerConfig.tagline && (
               <p className="text-base md:text-lg max-w-sm" style={{ color: 'var(--text-secondary)' }}>

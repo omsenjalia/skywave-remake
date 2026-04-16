@@ -171,40 +171,40 @@ export const servicesConfig: ServicesConfig = {
   description: "We offer end-to-end services and solutions for almost all industries. Dedicated teams or individual developers who work exclusively on your project.",
   services: [
     {
-      iconName: "Smartphone",
-      title: "App Development",
-      description: "Native and cross-platform mobile applications built with cutting-edge technologies for iOS and Android.",
-      color: "#0A84FF",
-    },
-    {
-      iconName: "Globe",
-      title: "Website Development",
-      description: "Responsive, scalable web applications using modern frameworks like React, Angular, Vue and Next.js.",
-      color: "#30D158",
-    },
-    {
-      iconName: "Palette",
-      title: "UI/UX Design",
-      description: "User-centered design that creates engaging and intuitive digital experiences users love.",
-      color: "#FF9F0A",
-    },
-    {
-      iconName: "Search",
+      iconName: "/images/icons/services/service-1.svg",
       title: "SEO Services",
       description: "Data-driven strategies to improve visibility and drive organic traffic growth for your business.",
       color: "#BF5AF2",
     },
     {
-      iconName: "Blocks",
-      title: "Odoo ERP",
-      description: "Custom ERP solutions to streamline your business processes, operations, and workflows.",
-      color: "#FF453A",
-    },
-    {
-      iconName: "Link",
+      iconName: "/images/icons/services/service-2.svg",
       title: "Blockchain",
       description: "Decentralized applications and smart contracts for secure, transparent transactions.",
       color: "#64D2FF",
+    },
+    {
+      iconName: "/images/icons/services/service-3.svg",
+      title: "Websites",
+      description: "Responsive, scalable web applications using modern frameworks like React, Angular, Vue and Next.js.",
+      color: "#30D158",
+    },
+    {
+      iconName: "/images/icons/services/service-4.svg",
+      title: "UI/UX Design",
+      description: "User-centered design that creates engaging and intuitive digital experiences users love.",
+      color: "#FF9F0A",
+    },
+    {
+      iconName: "/images/icons/services/service-5.svg",
+      title: "Apps Design",
+      description: "Native and cross-platform mobile applications built with cutting-edge technologies for iOS and Android.",
+      color: "#0A84FF",
+    },
+    {
+      iconName: "/images/icons/services/service-6.svg",
+      title: "Odoo ERP",
+      description: "Custom ERP solutions to streamline your business processes, operations, and workflows.",
+      color: "#FF453A",
     },
   ],
 };
@@ -249,13 +249,13 @@ export const whyChooseMeConfig: WhyChooseMeConfig = {
   ],
   featureCards: [
     {
-      image: "/images/about/feature-1.jpg",
+      image: "/images/icons/process/process-1.svg",
       imageAlt: "Make Real Differences",
       title: "Make Real Differences",
       description: "Our tailored solutions bring real changes to business processes, saving time and increasing ROI.",
     },
     {
-      image: "/images/about/feature-2.jpg",
+      image: "/images/icons/process/process-2.svg",
       imageAlt: "Hand Crafted Designs",
       title: "Hand Crafted Designs",
       description: "We specialize in handcrafted, unique designs for web and mobile applications.",
@@ -290,31 +290,10 @@ export const testimonialsConfig: TestimonialsConfig = {
   testimonials: [
     {
       id: 1,
-      name: "David",
-      role: "Business Owner",
-      image: "/testimonial-1.jpg",
-      quote: "Skywave team is easy to talk to and can finish work on time and with quality. Always ready to lend a helping hand!",
-    },
-    {
-      id: 2,
-      name: "Sarah",
-      role: "Project Manager",
-      image: "/testimonial-2.jpg",
-      quote: "Working with Skywave has been amazing. Very knowledgeable and reliable in case of urgencies. Very patient with us throughout the project.",
-    },
-    {
-      id: 3,
-      name: "Henry",
-      role: "CTO",
-      image: "/testimonial-3.jpg",
-      quote: "Skywave Info Solutions are excellent developers. I highly recommend their services. They provide top-notch code.",
-    },
-    {
-      id: 4,
-      name: "Michael",
-      role: "Startup Founder",
-      image: "/testimonial-4.jpg",
-      quote: "My working experience with them is amazing. They respond to clients very fast and completed work before due time.",
+      name: "Stuart",
+      role: "Client",
+      image: "/images/testimonial-stuart.png",
+      quote: "Skywave Info Solutions is great. My working experience with them is amazing. They response to his client very fast and quick and completed work before due time. I’ll recommended Skywave to everyone. Thanks for your hard work.",
     },
   ],
 };
@@ -351,15 +330,31 @@ export const techStackConfig: TechStackConfig = {
     },
     {
       name: "Database",
-      technologies: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Oracle", "DynamoDB"],
+      technologies: ["MySQL", "PostgreSQL", "MongoDB", "SQLite", "Oracle", "Microsoft SQL Server", "DynamoDB"],
+    },
+    {
+      name: "Framework",
+      technologies: ["Ruby on Rails", "Spring Boot", "Laravel", "Django"],
     },
     {
       name: "Cloud",
-      technologies: ["AWS", "Microsoft Azure", "Google Cloud Platform"],
+      technologies: ["Amazon Web Services", "Microsoft Azure", "Google Cloud Platform"],
     },
     {
       name: "DevOps",
-      technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab", "Gradle"],
+      technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab", "Gradle", "Azure DevOps Server"],
+    },
+    {
+      name: "ECommerce",
+      technologies: ["WooCommerce", "Magento", "Shopify", "Kentico", "NopCommerce"],
+    },
+    {
+      name: "CRM",
+      technologies: ["Zoho", "Microsoft Dynamics 365", "Salesforce", "HubSpot"],
+    },
+    {
+      name: "Platform",
+      technologies: ["WordPress", "Wix", "Drupal", "Joomla", "Squarespace", "DotNetNuke", "Sitefinity"],
     },
   ],
 };
@@ -430,6 +425,7 @@ export interface FooterLink {
 }
 
 export interface FooterConfig {
+  logoPath: string;
   logoText: string;
   contactLabel: string;
   email: string;
@@ -451,6 +447,7 @@ export interface FooterConfig {
 }
 
 export const footerConfig: FooterConfig = {
+  logoPath: "/images/brand/logo.svg",
   logoText: "SKYWAVE",
   contactLabel: "Contact Us",
   email: "info@skywaveinfosolutions.com",
@@ -492,17 +489,25 @@ export const footerConfig: FooterConfig = {
     { label: "GPS Tracking", href: "#solutions" },
     { label: "IoT Solutions", href: "#solutions" },
     { label: "Beacon Solutions", href: "#solutions" },
-    { label: "Healthcare", href: "#solutions" },
-    { label: "Chatbot", href: "#solutions" },
+    { label: "On Demand Marketplace", href: "#solutions" },
+    { label: "Catalogue Solutions", href: "#solutions" },
+    { label: "Logistics Solutions", href: "#solutions" },
+    { label: "Hospitality Solutions", href: "#solutions" },
+    { label: "Chatbot Solutions", href: "#solutions" },
     { label: "Voice Enabled", href: "#solutions" },
+    { label: "Healthcare Solutions", href: "#solutions" },
   ],
   hireLabel: "Hire Resources",
   hireLinks: [
     { label: "Android Developers", href: "#hire" },
+    { label: "Kotlin Developers", href: "#hire" },
     { label: "iOS Developers", href: "#hire" },
-    { label: "React Developers", href: "#hire" },
+    { label: "Chatbot Developers", href: "#hire" },
+    { label: "WordPress Developers", href: "#hire" },
+    { label: "Alexa Skills Developers", href: "#hire" },
     { label: "PHP Developers", href: "#hire" },
     { label: "Laravel Developers", href: "#hire" },
+    { label: "Java Developers", href: "#hire" },
     { label: "Shopify Developers", href: "#hire" },
   ],
 };

@@ -63,7 +63,8 @@ export function Services() {
         {/* Bento Grid */}
         <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {servicesConfig.services.map((service, index) => {
-            const Icon = iconMap[service.iconName] || Globe;
+            const isPath = service.iconName.startsWith('/');
+            const Icon = !isPath ? (iconMap[service.iconName] || Globe) : null;
             const color = (service as any).color || 'var(--accent-blue)';
             return (
               <div
@@ -83,7 +84,11 @@ export function Services() {
                     className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
                     style={{ background: `${color}15`, border: `1px solid ${color}25` }}
                   >
-                    <Icon className="w-5 h-5 transition-colors duration-300" style={{ color }} strokeWidth={1.5} />
+                    {isPath ? (
+                      <img src={service.iconName} alt="" className="w-5 h-5 object-contain" />
+                    ) : (
+                      Icon && <Icon className="w-5 h-5 transition-colors duration-300" style={{ color }} strokeWidth={1.5} />
+                    )}
                   </div>
 
                   <h3 className="text-lg font-bold mb-2 transition-colors duration-300" style={{ color: 'var(--text-primary)' }}>
