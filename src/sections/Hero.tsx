@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { heroConfig } from '../config';
+import { heroConfig, footerConfig } from '../config';
 import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -93,7 +93,7 @@ export function Hero() {
       }`}>
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 h-14 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Skywave Logo" className="h-8 w-auto" />
+            <img src={footerConfig.logoPath} alt="Skywave Logo" className="h-8 w-auto" />
           </div>
 
           {heroConfig.navLinks.length > 0 && (
