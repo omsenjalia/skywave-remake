@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { heroConfig } from '../config';
+import { heroConfig, footerConfig } from '../config';
 import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
